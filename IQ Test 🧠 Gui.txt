@@ -1,6 +1,7 @@
 local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHeptc/Kavo-UI-Library/main/source.lua"))()
 local Window = Library.CreateLib("IQ Test 🧠 Script by hetheonepro", "DarkTheme")
 local Tab = Window:NewTab("Main")
+local Section = Tab:NewSection("IQ Test 🧠")
 Section:NewButton("Get 200 IQ 🧠", "Instantly Get 200 IQ", function()
 loadstring(game:HttpGet("https://raw.githubusercontent.com/GuyOnPhilippines/Roblox/refs/heads/Scripts/IQ%20Test%20%F0%9F%A7%A0%20Script.txt"))()
 end)
