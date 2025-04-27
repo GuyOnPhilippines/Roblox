@@ -1,0 +1,13 @@
+--[Get 200 IQ without completing the tests. By hetheonepro]
+	local iqs = Instance.new("IntValue")
+	iqs.Name = "iqs"
+	iqs.Value = 0 
+	while true do
+		wait(0) 
+		iqs.Value = iqs.Value + 1 
+		local args = {
+    [1] = iqs.Value
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("RemoteEvents"):WaitForChild("ChangeIQ"):FireServer(unpack(args))
+		end
