@@ -21,7 +21,7 @@ Button.Size = UDim2.new(0, 190, 0, 57)
 Button.Font = Enum.Font.SourceSans
 Button.Text = "Get 200 IQ 🧠"
 Button.TextColor3 = Color3.fromRGB(0, 0, 0)
-Button.TextSize = 14.000
+Button.TextSize = 30.000
 
 game:GetService("StarterGui"):SetCore("SendNotification", { 
     Title = "IQ Test 🧠 Gui";
