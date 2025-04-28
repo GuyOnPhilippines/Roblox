@@ -1,0 +1,42 @@
+local main = Instance.new("ScreenGui")
+local Frame = Instance.new("Frame")
+local Button = Instance.new("TextButton")
+
+main.Name = "main"
+main.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
+main.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+main.ResetOnSpawn = false
+
+Frame.Parent = main
+Frame.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+Frame.BorderColor3 = Color3.fromRGB(103, 221, 213)
+Frame.Position = UDim2.new(0.100320168, 0, 0.379746825, 0)
+Frame.Size = UDim2.new(0, 190, 0, 57)
+
+Button.Name = "Button"
+Button.Parent = Frame
+Button.BackgroundColor3 = Color3.fromRGB(255, 249, 74)
+Button.Position = UDim2.new(0, 0, 0.379746825, 0)
+Button.Size = UDim2.new(0, 190, 0, 57)
+Button.Font = Enum.Font.SourceSans
+Button.Text = "Complete to Level 51 ☠️" 
+Button.TextColor3 = Color3.fromRGB(0, 0, 0)
+Button.TextSize = 20.000
+
+game:GetService("StarterGui"):SetCore("SendNotification", { 
+    Title = "Try To Die Gui";
+    Text = "By hetheonepro";
+    Icon = "rbxthumb://type=Asset&id=5107182114&w=150&h=150"})
+Duration = 5;
+ 
+Frame.Active = true -- main = gui
+Frame.Draggable = true
+ 
+Button.MouseButton1Down:connect(function()
+local args = {
+    [1] = 50
+}
+game:GetService("ReplicatedStorage"):WaitForChild("LevelChange"):FireServer(unpack(args))
+wait(1)
+game.Players.LocalPlayer.Character.Humanoid.Health = 0
+end)
