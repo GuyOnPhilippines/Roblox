@@ -1,1 +1,2 @@
 Roblox things. If any script is outdated/patched then tell me.
+NOTE TO GITHUB: These codes are called scripts which are used for roblox execution tools and are never meant to be used in a malicious way, for example: coding in Roblox Studio.
